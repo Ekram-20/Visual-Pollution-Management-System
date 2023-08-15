@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'sidebar.dart';
 import 'main_page/dashboard.dart';
 
@@ -13,13 +14,30 @@ class BasePage extends StatelessWidget {
       body: Row(
         children: [
           SideBar(),
+
           Expanded(
             child: Container(
               margin: const EdgeInsets.all(88.0),
+              
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text("The Title"),
+                  Container(
+                    alignment: Alignment.topLeft,
+                    child: Image.asset(
+                      'assets/images/evc-logo.png',
+                      width: 180,
+                      height: 48,
+                      alignment: Alignment.topLeft,
+                    ),
+                  ),
+                  
+                  Text(
+                    'الرئيسية',
+                    textAlign: TextAlign.right,
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+
                   Dashboard(),
                 ],
               ),

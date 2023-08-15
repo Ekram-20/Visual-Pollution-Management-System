@@ -6,31 +6,39 @@ class SideBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xFF1D1C21), 
+      width: 250,
+      color: const Color(0xFF1D1C21),
       padding: const EdgeInsets.all(16),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Image.asset('assets/images/logo.png', width: 250,), // logo
+          Image.asset('assets/images/logo.png', width: 250), // logo
+
+          SizedBox(height: 24),
+
           TextButton.icon(
             onPressed: () {},
-            
-            icon: const Icon(Icons.add), // Replace with your desired icon
-            label: const Text('الرئيسية'), // Replace with your desired text
+            icon: const Icon(Icons.grid_view_rounded),
+            label: const Text('الرئيسية', textAlign: TextAlign.right),
+            style: TextButton.styleFrom(
+              padding: const EdgeInsets.symmetric(vertical: 24),
+              textStyle: Theme.of(context).textTheme.headlineSmall,
+            ),
           ),
 
-          const SizedBox(height: 24),
-    
           TextButton.icon(
             onPressed: () {},
-            icon: const Icon(Icons.add), // Replace with your desired icon
-            label: const Text('إحصائيات'), // Replace with your desired text
+            icon: const Icon(Icons.bar_chart),
+            label: const Text('إحصائيات'),
+            style: TextButton.styleFrom(
+              padding: const EdgeInsets.symmetric(vertical: 24),
+              alignment: AlignmentDirectional(0, 4),
+              textStyle: Theme.of(context).textTheme.headlineSmall,
+            ),
           ),
         ],
       ),
     );
   }
 }
-
-
-
