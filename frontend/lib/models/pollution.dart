@@ -1,5 +1,6 @@
 class Pollution {
   
+  late int id;
   final String date;
   final String street;
   final String location;
@@ -10,6 +11,7 @@ class Pollution {
   final bool rejected;
 
   Pollution({
+    required this.id,
     required this.date,
     required this.street,
     required this.location,
@@ -22,6 +24,7 @@ class Pollution {
 
   factory Pollution.fromJson(Map<String, dynamic> json) {
     return Pollution(
+      id: json['id'],
       date: json['date'],
       street: json['street'],
       location: json['location'],

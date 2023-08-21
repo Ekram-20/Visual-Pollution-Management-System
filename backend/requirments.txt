@@ -1,0 +1,14 @@
+
+// for backend
+django 
+reset_framework
+coresheader
+
+
+// for yolo
+ultultralytics
+pytourch 
+
+
+// for location
+geocoder 

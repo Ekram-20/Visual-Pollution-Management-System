@@ -23,18 +23,18 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     
     # main page
-    path("main/pollutions", views.get_pollutions),
-    path("main/pollutions<str:pollution_type>", views.filter_pollutions),
-    path("main/search<str:search_key>", views.search),
-    path("main/export", views.export_pollutions),
-    path("main/delete<int:id>", views.delete_pollution),
+    path("main/pollutions/", views.get_pollutions),
+    # path("main/pollutions<str:pollution_type>", views.filter_pollutions),
+    # path("main/export/", views.export_pollutions),
+    path("main/delete/<int:id>/", views.delete_pollution),
 
     # statistics page
-    path("statistics", views.get_all_statistic),
-    path("statistics/<str:street>", views.get_street_statistic),
+    # path("statistics/", views.get_all_statistic),
+    # path("statistics/<str:street>", views.get_street_statistic),
 
     # for test
-    path("please/", views.please),
+    path("save/", views.save),
+    path("video/", views.tryVideo)
 ]
 
 
